@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create mobile phone</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create mobile phone</h1>
+		<button onclick="getAllProperties()">Wyswietl info o telefonie</button>
+		<script>
+			var telefon = {
+					marka: 		'Xiaomi',
+					istnieje:	 true,
+					year:		 '2018',
+					database:	'http://www.imdb.com/title/tt0111161/',
+					specs:		{waga: 20, language:'English', digitalSound:true},
+					fizyczne: 	['dotykowy', '4,5', 'Bialy']
+			};
+			
+			function getAllProperties() {
+				var txt = '';
+				var x;
+				for (x in telefon) {
+					txt += "<br />" + telefon[x];
+				} 
+				document.write('Wlasciwosci telefonu:' + txt );
+			}
+
+		
+		</script>
+	</body>
+</html>
